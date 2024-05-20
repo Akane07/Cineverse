@@ -1,7 +1,12 @@
 <template>
     <div class="header">
         <div class="wrapper">
-            <Logo class="logotip"></Logo>
+            <Logo class="logotip" @click = '$router.push("/")'></Logo>
+            <div class="lists">
+                <p class="films">Фильмы</p>
+                <p class="actors">Актёры</p>
+                <p class="directors">Режиссёры</p>
+            </div>
             <Input class="search"></Input>
         </div>
     </div>
@@ -28,11 +33,27 @@
 .logotip {
     transform: scale(0.8);
     margin-bottom: 10px;
+    cursor: pointer;
 }
 
+.lists {
+    display: flex;
+    gap: 25px;
+    margin-top: 42px;
+    font-size: large;
+    color: antiquewhite;
+}
+.lists :nth-child(2) {
+    color: rgb(202, 143, 94);
+    cursor: pointer;
+}
+.lists :nth-child(odd) {
+    cursor: pointer;
+}
 .search {
     margin-top: 52.5px;
     margin-right: 150px;
+    cursor: pointer;
 }
 </style>
 

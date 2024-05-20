@@ -7,6 +7,9 @@ export const routes = [
       name: "home",
       component: Home,
     },
+    {
+
+    }
   ];
   
   const router = createRouter({
